@@ -973,6 +973,7 @@ class ViewController: UIViewController {
             new = true
         }
         
+        endlessTime = 0
         endlessMode = false
         
         waveButton.setup("Start wave " + "\(UserDefaults.standard.integer(forKey: "wave"))", view.frame, 50, n: 4, font: font, h: height/5)
