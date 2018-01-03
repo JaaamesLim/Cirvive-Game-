@@ -946,7 +946,7 @@ class ViewController: UIViewController {
     }
     
     @objc private func spawn() {
-        for _ in 1...(self.wave/2) + 5 {
+        for _ in 1...(self.wave/2) + 4 {
             let _ = Timer.scheduledTimer(timeInterval: TimeInterval(arc4random_uniform(UInt32(self.wave + 10))) * 0.4, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: false)
         }
         wave += 1
@@ -956,7 +956,6 @@ class ViewController: UIViewController {
         musicPlayer.stop()
         endlessTimer.invalidate()
         homeScreen.isHidden = false
-        waveButton.setup("Start wave " + "\(UserDefaults.standard.integer(forKey: "wave"))", view.frame, 50, n: 4, font: font, h: height/5)
         disableTutorial()
         flashTimer.invalidate()
         killsButton.setup("Cirvive", view.frame, 50, n: 0, font: font, h: height/5 * 2)
@@ -970,13 +969,13 @@ class ViewController: UIViewController {
         }
         
         if CGFloat(UserDefaults.standard.float(forKey: "time")) < endlessTime && endlessMode {
-            
             UserDefaults.standard.set(endlessTime, forKey: "time")
             new = true
         }
         
         endlessMode = false
         
+        waveButton.setup("Start wave " + "\(UserDefaults.standard.integer(forKey: "wave"))", view.frame, 50, n: 4, font: font, h: height/5)
         highscoreButton.setup("Lasted " + String(UserDefaults.standard.float(forKey: "time")) + "s", view.frame, 50, n: 2, font: font, h: height/5 * 1.5)
         highscoreButton.titleLabel?.numberOfLines = 0
         highscoreButton.titleLabel?.font = UIFont(name: font, size: 25)
@@ -993,24 +992,24 @@ class ViewController: UIViewController {
     }
     
     @objc private func flash() {
-        var alpha: CGFloat = 0
+        var alpha: CGFloat = player.isReady() ? 0.2 : 0
         var expand: CGFloat = 1
         switch flashPosition {
         case 0:
             flashPosition = 1
-            alpha = 0.06
+            alpha += 0.06
             expand = 1.3
         case 1:
             flashPosition = 2
-            alpha = 0.02
+            alpha += 0.02
             expand = 1.1
         case 2:
             flashPosition = 3
-            alpha = 0.12
+            alpha += 0.12
             expand = 1.6
         case 3:
             flashPosition = 0
-            alpha = 0.02
+            alpha += 0.02
             expand = 1.1
         default:
             break

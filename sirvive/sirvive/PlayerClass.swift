@@ -51,10 +51,9 @@ class PlayerClass: UIView {
     
     @objc private func prompting() {
         if ready == true {
-            
             for i in 0...2 {
                 let prompt = PulseClass()
-                prompt.setup(r: radius, f: fill, c: CGPoint(x: radius, y: radius), b: radius/15)
+                prompt.setup(r: radius, f: fill, c: CGPoint(x: radius, y: radius), b: radius/20)
                 addSubview(prompt)
                 UIView.animate(withDuration: 0.25, delay: TimeInterval(i + 1)/10, options: [], animations: {
                     prompt.transform = CGAffineTransform(scaleX: 1.25 * 1.5, y: 1.25 * 1.5)

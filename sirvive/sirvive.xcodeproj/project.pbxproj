@@ -126,7 +126,7 @@
 				TargetAttributes = {
 					746811EC1F09327D008D19C7 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 86R4D6VBCN;
+						DevelopmentTeam = XPZ2DXUGSX;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -312,11 +312,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 86R4D6VBCN;
+				DEVELOPMENT_TEAM = XPZ2DXUGSX;
 				INFOPLIST_FILE = sirvive/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = j.cirvive;
+				PRODUCT_BUNDLE_IDENTIFIER = jlim.cirvive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -328,11 +328,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 86R4D6VBCN;
+				DEVELOPMENT_TEAM = XPZ2DXUGSX;
 				INFOPLIST_FILE = sirvive/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = j.cirvive;
+				PRODUCT_BUNDLE_IDENTIFIER = jlim.cirvive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
